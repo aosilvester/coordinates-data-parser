@@ -15,16 +15,17 @@ Simply import this module into your Scrapy scrape
 
 ### Installing
 Once imported, you can call the function and pass the html response. Upon success the module will return a dict with the coordinates. Upon failure, the module will return None. you can simply add the following code into your scrape. Note that the parameter 'response' is the html data your scrape is directed to.
+```python
     import CoordinatesDataParser
     def get_coords(self, response):
         parser = CoordinatesDataParser()
         return parser.get_coords(response)
-
+```
 ### Executing program
 The coordinates data parser is run by integrating into your scrape and activating through your standard means
 
 ### Limitations
-As the coordinates are extracted via regex, the parser can only extract coordinates for the North American continent. Additionally, the parser is hard coded to search for coordinates only in the body of the html response, and does not currently have the functionality to search the <head> of the html response. This is done to cut down on false positive results.
+As the coordinates are extracted via regex, the parser can only extract coordinates for the North American continent. Additionally, the parser is hard coded to search for coordinates only in the body of the html response, and does not currently have the functionality to search the \<head\> of the html response. This is done to cut down on false positive results.
 
 ## Help
 If there are any problems or issues with this app, please contact the author.
