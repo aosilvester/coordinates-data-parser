@@ -24,7 +24,7 @@ Once imported, you can call the function and pass the html response. Upon succes
 The coordinates data parser is run by integrating into your scrape and activating through your standard means
 
 ### Limitations
-As the coordinates are extracted via regex, the parser can only extract coordinates for the North American continent. 
+As the coordinates are extracted via regex, the parser can only extract coordinates for the North American continent. Additionally, the parser is hard coded to search for coordinates only in the body of the html response, and does not currently have the functionality to search the <head> of the html response. This is done to cut down on false positive results.
 
 ## Help
 If there are any problems or issues with this app, please contact the author.
